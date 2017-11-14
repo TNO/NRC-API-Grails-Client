@@ -28,7 +28,7 @@ class ConnectController {
             return
         }
 
-        def url = 'http://localhost:8080/nrc/api/openmhealth/testCall'
+        def url = 'http://localhost:8080/nrc/api/researcher/fhir/dataPoints/ferry'
 
         def nrcResponse = oauthService.getNrcResource( token, url )
 

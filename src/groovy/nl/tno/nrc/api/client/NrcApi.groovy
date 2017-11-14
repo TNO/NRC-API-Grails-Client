@@ -10,9 +10,9 @@ import org.scribe.utils.*
 public class NrcApi extends org.scribe.builder.api.DefaultApi20
 {
   private static final String AUTHORIZATION_URL = "http://localhost:8080/nrc/oauth/authorize?client_id=%s&redirect_uri=%s&response_type=code&scope=%s"
-//  private static final String AUTHORIZATION_URL = "http://localhost:8080/oauth2-test/oauth/authorize?client_id=%s&redirect_uri=%s&response_type=code&scope=read"
+//  private static final String AUTHORIZATION_URL = "http://localhost:8080/nrc/oauth/authorize?client_id=%s&redirect_uri=%s&response_type=code&scope=%s"
   private static final String TOKEN_URL = "http://localhost:8080/nrc/oauth/token?grant_type=authorization_code"
-//  private static final String TOKEN_URL = "http://localhost:8080/oauth2-test/oauth/token?grant_type=authorization_code"
+//  private static final String TOKEN_URL = "http://localhost:8080/nrc/oauth/token?grant_type=authorization_code"
 
   /**
    * Returns the URL that receives the access token requests.
@@ -27,7 +27,7 @@ public class NrcApi extends org.scribe.builder.api.DefaultApi20
   @Override
   public Verb getAccessTokenVerb()
   {
-	return Verb.POST;
+	return Verb.POST
   }
   
   @Override
