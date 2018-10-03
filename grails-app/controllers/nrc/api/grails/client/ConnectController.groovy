@@ -28,17 +28,12 @@ class ConnectController {
             return
         }
 
-        def url = 'http://localhost:8080/nrc/api/researcher/fhir/dataPoints/ferry'
-
-        def nrcResponse = oauthService.getNrcResource( token, url )
-
-        def jsonResponse = JSON.parse( nrcResponse.body )
-
+        println token
 
         // set output headers
         response.status = 200
         response.contentType = 'application/json;charset=UTF-8'
 
-        render jsonResponse
+        render token
     }
 }

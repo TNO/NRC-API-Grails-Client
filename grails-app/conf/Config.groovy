@@ -125,16 +125,18 @@ oauth {
             successUri = "${grails.serverURL}/connect/success"
             failureUri = "${grails.serverURL}/connect/failure"
 
-            key = "<key>"
-            secret = "<secret>"
+            // Do not forget to change the BaseURL in NrcApi.groovy!
+            key = ""
+            secret = ""
 
-//            signatureType = org.scribe.model.SignatureType.Header
-
-            scope = "read_data_points write_data_points"
+            // Example "read_data_points write_data_points delete_data_points"
+            scope = ""
 
             // The callback is explicitly mentioned here, so it is sent along with
             // the Oauth calls.
             callback = "${grails.serverURL}/oauth/nrc/callback"
+
+            // signatureType = org.scribe.model.SignatureType.Header
         }
     }
 }
